@@ -10,6 +10,7 @@ import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import javafx.application.Application;
+import static javafx.application.Application.launch;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.scene.Scene;
