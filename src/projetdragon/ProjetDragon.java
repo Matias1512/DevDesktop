@@ -6,23 +6,17 @@ package projetdragon;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.web.WebEngine;
-import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import jdk.nashorn.internal.runtime.regexp.joni.Config;
 import org.json.JSONArray;
@@ -39,13 +33,11 @@ public class ProjetDragon extends Application {
     public void start(Stage primaryStage) throws MalformedURLException, IOException, JSONException {
 
         ArrayList<Version> versionsArray = new ArrayList<Version>();
-        
         try {
             // Read the JSON file into a string
-            File file = new File("C:\\Users\\matia\\Desktop\\ynov\\DevDesktop\\ProjetDragon\\src\\projetdragon\\firmware_list.json");
+            File file = new File("C:\\Users\\matia\\OneDrive\\Bureau\\ynov\\DevDesktop\\DevDesktop\\src\\projetdragon\\firmware_list.json");
             String jsonString = new String(Files.readAllBytes(file.toPath()));
             
-
             // Parse the JSON string into a JSONObject
             JSONObject jsonObject = new JSONObject(jsonString);
 
@@ -82,7 +74,7 @@ public class ProjetDragon extends Application {
         
         Scene scene = new Scene(root, 300, 250);
         
-        primaryStage.setTitle("Hello World!");
+        primaryStage.setTitle("Projet");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -92,8 +84,6 @@ public class ProjetDragon extends Application {
      */
     public static void main(String[] args) {
         launch(args);
-    }
-    
+    }   
 }
-
 //https://www.tabnine.com/code/java/methods/java.net.URL/openStream
