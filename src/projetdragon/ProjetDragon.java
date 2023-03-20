@@ -4,9 +4,16 @@
  */
 package projetdragon;
 
+import static com.sun.deploy.config.Config.CONNECTION_TIMEOUT;
+import static com.sun.deploy.config.Config.READ_TIMEOUT;
+import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import javafx.application.Application;
@@ -33,10 +40,12 @@ public class ProjetDragon extends Application {
     @Override
     public void start(Stage primaryStage) throws MalformedURLException, IOException, JSONException {
 
+        String pwd = System.getProperty("user.dir");
+        
         ArrayList<Version> versionsArray = new ArrayList<Version>();
         try {
             // Read the JSON file into a string
-            File file = new File("C:\\Users\\matia\\OneDrive\\Bureau\\ynov\\DevDesktop\\DevDesktop\\src\\projetdragon\\firmware_list.json");
+            File file = new File(pwd+"\\src\\projetdragon\\firmware_list.json");
             String jsonString = new String(Files.readAllBytes(file.toPath()));
             
             // Parse the JSON string into a JSONObject
@@ -54,16 +63,25 @@ public class ProjetDragon extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
         ComboBox combo_box =
                     new ComboBox(FXCollections
                               .observableArrayList(versionsArray));
         
         Button btn = new Button();
-        btn.setText("Show");
+        btn.setText("Download");
         btn.setOnAction((ActionEvent event) -> {
             Object vobject = combo_box.getValue();
             Version v = (Version)vobject;
+            try (BufferedInputStream bis = new BufferedInputStream(new URL(v.getValue()).openStream());  
+            FileOutputStream fos = new FileOutputStream(pwd+"\\src\\projetdragon\\Firmwares\\"+v.getKey()+".bin")) {
+            byte data[] = new byte[1024];
+            int byteContent;
+            while ((byteContent = bis.read(data, 0, 1024)) != -1) {
+                fos.write(data, 0, byteContent);
+            }
+            } catch (IOException e) {
+               e.printStackTrace(System.out);
+            }
             System.out.println(v.getValue());
         });
 
