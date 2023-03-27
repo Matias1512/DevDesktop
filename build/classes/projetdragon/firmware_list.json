@@ -1,0 +1,74 @@
+{
+    "versions":[
+    	{
+            "version": "1.0-beta-27-pcb-1.0.3",
+            "url":"https://thingz-mutiny.s3.eu-central-1.amazonaws.com/galaxia-firmware/firmware-1-0-beta-27-pcb-1-0-3.bin",
+            "date": "03/02/2023"
+        },
+    	{
+            "version": "1.0-beta-26-pcb-1.0.3",
+            "url":"https://thingz-mutiny.s3.eu-central-1.amazonaws.com/galaxia-firmware/firmware-1-0-beta-26-pcb-1-0-3.bin",
+            "date": "25/01/2023"
+        },
+    	{
+            "version": "1.0-beta-25-pcb-1.0.3",
+            "url":"https://thingz-mutiny.s3.eu-central-1.amazonaws.com/galaxia-firmware/firmware-1-0-beta-25-pcb-1-0-3.bin",
+            "date": "10/01/2023"
+        },
+    	{
+            "version": "1.0-beta-24-pcb-1.0.3",
+            "url":"https://thingz-mutiny.s3.eu-central-1.amazonaws.com/galaxia-firmware/firmware-1-0-beta-24-pcb-1-0-3.bin",
+            "date": "25/11/2022"
+        },
+    	{
+            "version": "1.0-beta-22-pcb-1.0.3",
+            "url":"https://thingz-mutiny.s3.eu-central-1.amazonaws.com/galaxia-firmware/firmware-1-0-beta-22-pcb-1-0-3.bin",
+            "date": "10/06/2022"
+        },
+    	{
+            "version": "1.0-beta-21-pcb-1.0.3",
+            "url":"https://thingz-mutiny.s3.eu-central-1.amazonaws.com/galaxia-firmware/firmware-1-0-beta-21-pcb-1-0-3.bin",
+            "date": "01/06/2022"
+        },
+    	{
+            "version": "1.0-beta-20-pcb-1.0.3",
+            "url":"https://thingz-mutiny.s3.eu-central-1.amazonaws.com/galaxia-firmware/firmware-1-0-beta-20-pcb-1-0-3.bin",
+            "date": "04/03/2022"
+        },
+    	{
+            "version": "1.0-beta-18-2-pcb-1.0.3",
+            "url":"https://thingz-mutiny.s3.eu-central-1.amazonaws.com/galaxia-firmware/firmware-1-0-beta-18-2-pcb-1-0-3.bin",
+            "date": "16/02/2022"
+        },
+        {
+            "version": "1.0-beta-18-1-pcb-1.0.3",
+            "url":"https://thingz-mutiny.s3.eu-central-1.amazonaws.com/galaxia-firmware/firmware-1-0-beta-18-1-pcb-1-0-3.bin",
+            "date": "15/02/2022"
+        },
+        {
+            "version": "1.0-beta-18-pcb-1.0.3",
+            "url":"https://thingz-mutiny.s3.eu-central-1.amazonaws.com/galaxia-firmware/firmware-1-0-beta-18-pcb-1-0-3.bin",
+            "date": "08/10/2021"
+        },
+        {
+            "version": "1.0-beta-17-pcb-1.0.3",
+            "url":"https://thingz-mutiny.s3.eu-central-1.amazonaws.com/galaxia-firmware/firmware-1-0-beta-17-pcb-1-0-3.bin",
+            "date": "10/09/2021"
+        },
+        {
+            "version": "1.0-beta-16-pcb-1.0.3",
+            "url":"https://thingz-mutiny.s3.eu-central-1.amazonaws.com/galaxia-firmware/firmware-1-0-beta-16-pcb-1-0-3.bin",
+            "date": "27/08/2021"
+        },
+        {
+            "version": "1.0-beta-15-pcb-1.0.3",
+            "url":"https://thingz-mutiny.s3.eu-central-1.amazonaws.com/galaxia-firmware/firmware-1-0-beta-15-pcb-1-0-3.bin",
+            "date": "23/08/2021"
+        },
+        {
+            "version": "1.0-beta-14-pcb-1.0.3",
+            "url":"https://thingz-mutiny.s3.eu-central-1.amazonaws.com/galaxia-firmware/firmware-1-0-beta-14-pcb-1-0-3.bin",
+            "date": "23/07/2021"
+        }
+    ]
+}
