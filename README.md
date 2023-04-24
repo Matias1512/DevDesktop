@@ -1,5 +1,7 @@
 # DevDesktop
-1 - Maitriser un langage ou un framework de développement d'application desktop
+1 - Maitriser un langage ou un framework de développement d'application desktop **Fais**
+
+Utilise Java JavaFx
 
 2 -Implémenter une interface graphique dans votre application à l'aide d'un toolkit graphique **Fais**
 
