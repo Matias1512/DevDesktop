@@ -33,6 +33,9 @@ import javax.swing.filechooser.FileSystemView;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 
 /**
  *
@@ -118,15 +121,39 @@ public class ProjetDragon extends Application {
             }
         });
         
+        Button btnCodage = new Button();
+        btnCodage.setText("Codage");
+        btnCodage.setOnAction((ActionEvent event) -> {
+            CodageView codageView = new CodageView();
+            try {
+                codageView.start(new Stage());
+            } catch (IOException ex) {
+                Logger.getLogger(ProjetDragon.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
+        
+        // Charger l'image
+        Image image = new Image("https://ucarecdn.com/13bbbf2d-ccfd-4f7d-b195-048ca0f6c46b/-/format/auto/-/preview/3000x3000/-/quality/lighter/renvoie%20rcto-vrso.png");
+
+        // Créer une instance de ImageView pour afficher l'image
+        ImageView imageView = new ImageView(image);
+        imageView.setFitWidth(300);
+        imageView.setPreserveRatio(true);
+        
         StackPane root = new StackPane();
         VBox vbox = new VBox();
+        HBox hbox = new HBox();
+        hbox.getChildren().add(vbox);
+        hbox.getChildren().add(imageView);
+        
         vbox.getChildren().add(combo_box);
         vbox.getChildren().add(btn);
-        root.getChildren().add(vbox);
+        vbox.getChildren().add(btnCodage);
+        root.getChildren().add(hbox);
         
-        Scene scene = new Scene(root, 300, 250);
+        Scene scene = new Scene(root, 500, 250);
         
-        primaryStage.setTitle("Projet");
+        primaryStage.setTitle("Firmwares");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
